@@ -1,0 +1,77 @@
+@use 'variables';
+
+a {
+    text-decoration: underline;
+    color: variables.$displaytext;
+}
+
+a:focus, a:hover {font-weight: bold;}
+
+body {
+    background-color: variables.$background;
+    padding: 0;
+    height: 100vh;
+    margin: auto;
+    font-family: variables.$nunito;
+    color: variables.$displaytext;
+}
+
+.right {
+    text-align: right;
+}
+
+header {
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    background-image: url(../images/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: variables.$darkbuttons;
+    padding: 0;
+}
+
+.titlebox {
+    grid-row: 2;
+
+    &__main {font-size: 4rem;}
+    &__sub {font-size: 3rem;}
+}
+
+h1, h2 {
+    font-family: variables.$alegreya;
+    color: variables.$displaytext;
+    text-align: center;
+}
+
+h1 {line-height: 3rem;}
+
+.tagline {
+    grid-row: 3;
+    height: 100%;
+}
+
+.copybox {
+    background-color: variables.$copybox;
+    color: variables.$copytext;
+    font-family: variables.$nunito;
+    height: 100%;
+    padding-top: .2rem;
+
+    &__tagline {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+main {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: auto minmax(300px, 1fr) auto;
+}
+
+.comingsoon__box {
+    grid-column: 2;
+    background-color: variables.$bluebuttons;
+    padding: 1rem;
+    margin: auto;
+}
