@@ -4,6 +4,7 @@ import "../styles/index.scss";
 const Header = () => {
     return (
 <header>
+<div className="header-hero">
 <div className="titlebox">
 <title>Riddargarden B&amp;B</title>
  <h1 className="titlebox__main">Riddargarden<br />
@@ -11,9 +12,10 @@ const Header = () => {
   </h1>
   </div>
   <div className="tagline">
+  </div>
+  </div>
   <div className="copybox">
     <p className="copybox__tagline">Kommer snart! / Coming soon!</p>
-  </div>
   </div>
 </header>
     )

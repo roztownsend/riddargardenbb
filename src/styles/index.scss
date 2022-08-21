@@ -22,6 +22,12 @@ body {
 
 header {
     display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 0;
+}
+
+.header-hero {
+    display: grid;
     grid-template-rows: 1fr 4fr 1fr;
     background-image: url(../images/header.png);
     background-repeat: no-repeat;
@@ -32,9 +38,11 @@ header {
 
 .titlebox {
     grid-row: 2;
+    display: flex;
+    justify-content: center;
 
-    &__main {font-size: 4rem;}
-    &__sub {font-size: 3rem;}
+    &__main {font-size: 14vmin;}
+    &__sub {font-size: 10vmin;}
 }
 
 h1, h2 {
@@ -43,22 +51,19 @@ h1, h2 {
     text-align: center;
 }
 
-h1 {line-height: 3rem;}
+h1 {line-height: 10vmin;}
 
 .tagline {
     grid-row: 3;
-    height: 100%;
 }
 
 .copybox {
     background-color: variables.$copybox;
     color: variables.$copytext;
     font-family: variables.$nunito;
-    height: 100%;
-    padding-top: .2rem;
 
     &__tagline {
-        font-size: 1.5rem;
+        font-size: 5vmin;
         text-align: center;
     }
 }
@@ -66,7 +71,7 @@ h1 {line-height: 3rem;}
 main {
     display: grid;
     padding: 1rem;
-    grid-template-columns: auto minmax(300px, 1fr) auto;
+    grid-template-columns: auto minmax(80%, 1fr) auto;
 }
 
 .comingsoon__box {
